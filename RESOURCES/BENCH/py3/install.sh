@@ -1,3 +1,6 @@
+pip3 install --upgrade pip
+pip3 install gnureadline
+
 pip3 install numpy
 pip3 install pandas
 pip3 install opencv-python
@@ -25,11 +28,17 @@ pip3 install elist
 pip3 install tlist
 pip3 install dlist
 
+
+
 pip3 install ltdict
 pip3 install edict
 
 pip3 install dtable
 pip3 install qtable
+
+pip3 install ematmap
+
+pip3 install eobj
 
 pip3 install nvhead
 pip3 install xxurl
@@ -44,4 +53,6 @@ pip3 install efdir
 pip3 install pyminiproj
 pip3 install minidoc
 
+
+pip3 install efuntool
 

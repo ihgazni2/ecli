@@ -1,0 +1,18 @@
+
+/* Reserved words.  Members of the first group are only recognized
+   in the case that they are preceded by a list_terminator.  Members
+   of the second group are for [[...]] commands.  Members of the
+   third group are recognized only under special circumstances. */
+%token IF THEN ELSE ELIF FI CASE ESAC FOR SELECT WHILE UNTIL DO DONE FUNCTION COPROC
+%token COND_START COND_END COND_ERROR
+%token IN BANG TIME TIMEOPT TIMEIGN
+
+/* More general tokens. yylex () knows how to make these. */
+%token <word> WORD ASSIGNMENT_WORD REDIR_WORD
+%token <number> NUMBER
+%token <word_list> ARITH_CMD ARITH_FOR_EXPRS
+%token <command> COND_CMD
+%token AND_AND OR_OR GREATER_GREATER LESS_LESS LESS_AND LESS_LESS_LESS
+%token GREATER_AND SEMI_SEMI SEMI_AND SEMI_SEMI_AND
+%token LESS_LESS_MINUS AND_GREATER AND_GREATER_GREATER LESS_GREATER
+%token GREATER_BAR BAR_AND

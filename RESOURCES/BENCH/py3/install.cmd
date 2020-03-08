@@ -59,3 +59,8 @@ ln -s /usr/local/bin/pip3.8    /usr/bin/pip3.8
 ln -s /usr/local/bin/pip3.8    /usr/bin/pip382
 
 which pip3
+
+apt install libreadline-dev 
+apt install libncurses5-dev
+apt install patch
+apt install swig
