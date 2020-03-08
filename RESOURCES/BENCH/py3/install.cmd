@@ -1,3 +1,8 @@
+#!/bin/sh
+
+##!/bin/bash --posix  is same as #!/bin/sh
+##!/bin/bash
+
 apt remove python3
 apt purge python3
 rpm -qa | egrep python | xargs rpm -ev --allmatches --nodeps
@@ -14,6 +19,12 @@ rm -r /usr/share/python3
 rm -r /usr/share/man/man1/python3.1.gz
 rm -r /etc/python3.6
 which python3
+
+whereis pip3
+#rm cooperate pip
+#.....
+which pip3
+
 
 
 wget https://www.python.org/ftp/python/3.8.2/Python-3.8.2.tgz
@@ -40,3 +51,11 @@ ln -s /usr/local/bin/python3.8 /usr/bin/python3.8
 ln -s /usr/local/bin/python3.8 /usr/bin/python382 
 
 which python3
+
+whereis pip3
+
+ln -s /usr/local/bin/pip3      /usr/bin/pip3
+ln -s /usr/local/bin/pip3.8    /usr/bin/pip3.8
+ln -s /usr/local/bin/pip3.8    /usr/bin/pip382
+
+which pip3
