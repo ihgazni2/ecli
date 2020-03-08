@@ -1,4 +1,4 @@
-/usr/local/lib/python3.8/site-packages/ecli-0.0.7-py3.8.egg
+/usr/local/lib/python3.8/site-packages/ecli-0.0.8-py3.8.egg
 /usr/local/bin/ecli_lcp
 /usr/local/bin/ecli_lcut
 /usr/local/bin/ecli_ldd
