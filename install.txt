@@ -1,3 +1,3 @@
-/usr/local/lib/python3.8/site-packages/ecli-0.0.5-py3.8.egg
+/usr/local/lib/python3.8/site-packages/ecli-0.0.6-py3.8.egg
 /usr/local/bin/ecli_pobj
 /usr/local/bin/ecli_srch
