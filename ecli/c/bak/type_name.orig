@@ -1,0 +1,18 @@
+
+/* The types that the various syntactical units return. */
+
+%type <command> inputunit command pipeline pipeline_command
+%type <command> list list0 list1 compound_list simple_list simple_list1
+%type <command> simple_command shell_command
+%type <command> for_command select_command case_command group_command
+%type <command> arith_command
+%type <command> cond_command
+%type <command> arith_for_command
+%type <command> coproc
+%type <command> function_def function_body if_command elif_clause subshell
+%type <redirect> redirection redirection_list
+%type <element> simple_command_element
+%type <word_list> word_list pattern
+%type <pattern> pattern_list case_clause_sequence case_clause
+%type <number> timespec
+%type <number> list_terminator

@@ -1,0 +1,36 @@
+
+/* Reserved words.  These are only recognized as the first word of a
+   command. */
+STRING_INT_ALIST word_token_alist[] = {
+  { "if", IF },
+  { "then", THEN },
+  { "else", ELSE },
+  { "elif", ELIF },
+  { "fi", FI },
+  { "case", CASE },
+  { "esac", ESAC },
+  { "for", FOR },
+#if defined (SELECT_COMMAND)
+  { "select", SELECT },
+#endif
+  { "while", WHILE },
+  { "until", UNTIL },
+  { "do", DO },
+  { "done", DONE },
+  { "in", IN },
+  { "function", FUNCTION },
+#if defined (COMMAND_TIMING)
+  { "time", TIME },
+#endif
+  { "{", '{' },
+  { "}", '}' },
+  { "!", BANG },
+#if defined (COND_COMMAND)
+  { "[[", COND_START },
+  { "]]", COND_END },
+#endif
+#if defined (COPROCESS_SUPPORT)
+  { "coproc", COPROC },
+#endif
+  { (char *)NULL, 0}
+};

@@ -1,0 +1,140 @@
+from enum import Enum
+from enum import unique
+
+# /* Token type.  */
+
+@unique
+class YYTOKENTYPE(Enum):
+    IF = 258
+    THEN = 259
+    ELSE = 260
+    ELIF = 261
+    FI = 262
+    CASE = 263
+    ESAC = 264
+    FOR = 265
+    SELECT = 266
+    WHILE = 267
+    UNTIL = 268
+    DO = 269
+    DONE = 270
+    FUNCTION = 271
+    COPROC = 272
+    COND_START = 273
+    COND_END = 274
+    COND_ERROR = 275
+    IN = 276
+    BANG = 277
+    TIME = 278
+    TIMEOPT = 279
+    TIMEIGN = 280
+    WORD = 281
+    ASSIGNMENT_WORD = 282
+    REDIR_WORD = 283
+    NUMBER = 284
+    ARITH_CMD = 285
+    ARITH_FOR_EXPRS = 286
+    COND_CMD = 287
+    AND_AND = 288
+    OR_OR = 289
+    GREATER_GREATER = 290
+    LESS_LESS = 291
+    LESS_AND = 292
+    LESS_LESS_LESS = 293
+    GREATER_AND = 294
+    SEMI_SEMI = 295
+    SEMI_AND = 296
+    SEMI_SEMI_AND = 297
+    LESS_LESS_MINUS = 298
+    AND_GREATER = 299
+    AND_GREATER_GREATER = 300
+    LESS_GREATER = 301
+    GREATER_BAR = 302
+    BAR_AND = 303
+    yacc_EOF = 304
+
+yytokentype = YYTOKENTYPE 
+
+# /* Tokens.  */
+IF=258
+THEN=259
+ELSE=260
+ELIF=261
+FI=262
+CASE=263
+ESAC=264
+FOR=265
+SELECT=266
+WHILE=267
+UNTIL=268
+DO=269
+DONE=270
+FUNCTION=271
+COPROC=272
+COND_START=273
+COND_END=274
+COND_ERROR=275
+IN=276
+BANG=277
+TIME=278
+TIMEOPT=279
+TIMEIGN=280
+WORD=281
+ASSIGNMENT_WOR=282
+REDIR_WORD=283
+NUMBER=284
+ARITH_CMD=285
+ARITH_FOR_EXPRS=286
+COND_CMD=287
+AND_AND=288
+OR_OR=289
+GREATER_GREATER=290
+LESS_LESS=291
+LESS_AND=292
+LESS_LESS_LESS=293
+GREATER_AND=294
+SEMI_SEMI=295
+SEMI_AND=296
+SEMI_SEMI_AND=297
+LESS_LESS_MINUS=298
+AND_GREATER=299
+AND_GREATER_GREATER=300
+LESS_GREATER=301
+GREATER_BAR=302
+BAR_AND=303
+yacc_EOF=304
+
+#/* Value type.  */
+
+class WORD_DESC():
+    pass	
+
+class WORD_LIST():
+    pass
+
+class COMMAND():
+    pass	
+
+class REDIRECT():
+    pass    
+
+class ELEMENT():
+    pass	
+
+class PATTERN_LIST():
+    pass	
+
+class YYSTYPE():
+    word = WORD_DESC()
+    number = -1
+    word_list = WORD_LIST()	
+    command = COMMAND()
+    redirect = REDIRECT()
+    element = ELEMENT()
+    pattern = PATTERN_LIST()	
+
+yylval = YYSTYPE()
+
+def yyparse ():
+    pass	
+

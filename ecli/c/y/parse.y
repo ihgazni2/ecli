@@ -335,6 +335,42 @@ static FILE *yyerrstream;
   PATTERN_LIST *pattern;
 }
 
+/* Reserved words.  Members of the first group are only recognized
+   in the case that they are preceded by a list_terminator.  Members
+   of the second group are for [[...]] commands.  Members of the
+   third group are recognized only under special circumstances. */
+%token IF THEN ELSE ELIF FI CASE ESAC FOR SELECT WHILE UNTIL DO DONE FUNCTION COPROC
+%token COND_START COND_END COND_ERROR
+%token IN BANG TIME TIMEOPT TIMEIGN
+
+/* More general tokens. yylex () knows how to make these. */
+%token <word> WORD ASSIGNMENT_WORD REDIR_WORD
+%token <number> NUMBER
+%token <word_list> ARITH_CMD ARITH_FOR_EXPRS
+%token <command> COND_CMD
+%token AND_AND OR_OR GREATER_GREATER LESS_LESS LESS_AND LESS_LESS_LESS
+%token GREATER_AND SEMI_SEMI SEMI_AND SEMI_SEMI_AND
+%token LESS_LESS_MINUS AND_GREATER AND_GREATER_GREATER LESS_GREATER
+%token GREATER_BAR BAR_AND
+
+/* The types that the various syntactical units return. */
+
+%type <command> inputunit command pipeline pipeline_command
+%type <command> list list0 list1 compound_list simple_list simple_list1
+%type <command> simple_command shell_command
+%type <command> for_command select_command case_command group_command
+%type <command> arith_command
+%type <command> cond_command
+%type <command> arith_for_command
+%type <command> coproc
+%type <command> function_def function_body if_command elif_clause subshell
+%type <redirect> redirection redirection_list
+%type <element> simple_command_element
+%type <word_list> word_list pattern
+%type <pattern> pattern_list case_clause_sequence case_clause
+%type <number> timespec
+%type <number> list_terminator
+
 %start inputunit
 
 %left '&' ';' '\n' yacc_EOF
@@ -2102,6 +2138,79 @@ read_secondary_line (remove_quoted_newline)
 /*				YYLEX ()			    */
 /*								    */
 /* **************************************************************** */
+
+/* Reserved words.  These are only recognized as the first word of a
+   command. */
+STRING_INT_ALIST word_token_alist[] = {
+  { "if", IF },
+  { "then", THEN },
+  { "else", ELSE },
+  { "elif", ELIF },
+  { "fi", FI },
+  { "case", CASE },
+  { "esac", ESAC },
+  { "for", FOR },
+#if defined (SELECT_COMMAND)
+  { "select", SELECT },
+#endif
+  { "while", WHILE },
+  { "until", UNTIL },
+  { "do", DO },
+  { "done", DONE },
+  { "in", IN },
+  { "function", FUNCTION },
+#if defined (COMMAND_TIMING)
+  { "time", TIME },
+#endif
+  { "{", '{' },
+  { "}", '}' },
+  { "!", BANG },
+#if defined (COND_COMMAND)
+  { "[[", COND_START },
+  { "]]", COND_END },
+#endif
+#if defined (COPROCESS_SUPPORT)
+  { "coproc", COPROC },
+#endif
+  { (char *)NULL, 0}
+};
+
+/* other tokens that can be returned by read_token() */
+STRING_INT_ALIST other_token_alist[] = {
+  /* Multiple-character tokens with special values */
+  { "--", TIMEIGN },
+  { "-p", TIMEOPT },
+  { "&&", AND_AND },
+  { "||", OR_OR },
+  { ">>", GREATER_GREATER },
+  { "<<", LESS_LESS },
+  { "<&", LESS_AND },
+  { ">&", GREATER_AND },
+  { ";;", SEMI_SEMI },
+  { ";&", SEMI_AND },
+  { ";;&", SEMI_SEMI_AND },
+  { "<<-", LESS_LESS_MINUS },
+  { "<<<", LESS_LESS_LESS },
+  { "&>", AND_GREATER },
+  { "&>>", AND_GREATER_GREATER },
+  { "<>", LESS_GREATER },
+  { ">|", GREATER_BAR },
+  { "|&", BAR_AND },
+  { "EOF", yacc_EOF },
+  /* Tokens whose value is the character itself */
+  { ">", '>' },
+  { "<", '<' },
+  { "-", '-' },
+  { "{", '{' },
+  { "}", '}' },
+  { ";", ';' },
+  { "(", '(' },
+  { ")", ')' },
+  { "|", '|' },
+  { "&", '&' },
+  { "newline", '\n' },
+  { (char *)NULL, 0}
+};
 
 /* others not listed here:
 	WORD			look at yylval.word
