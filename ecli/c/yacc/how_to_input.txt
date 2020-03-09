@@ -1,0 +1,3 @@
+./flex0.o
+input here...
+ctrl+D
