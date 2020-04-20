@@ -5,7 +5,7 @@
 
 apt remove python3
 apt purge python3
-rpm -qa | egrep python | xargs rpm -ev --allmatches --nodeps
+## rpm -qa | egrep python | xargs rpm -ev --allmatches --nodeps
 whereis python3
 rm /usr/bin/python3
 rm /usr/bin/python3.6
