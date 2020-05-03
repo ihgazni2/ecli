@@ -1,4 +1,4 @@
-/usr/local/lib/python3.6/dist-packages/ecli-0.0.8-py3.6.egg
+/usr/local/lib/python3.6/dist-packages/ecli-0.0.10-py3.6.egg
 /usr/local/bin/ecli_abbr
 /usr/local/bin/ecli_lcp
 /usr/local/bin/ecli_lcut
