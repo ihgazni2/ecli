@@ -5,7 +5,7 @@ requirements = []
 
 setup(
       name="ecli",
-      version = "0.0.8", #@version@#
+      version = "0.0.10", #@version@#
       description="handle,.in progressing..,APIs",
       author="ihgazni2",
       url="https://github.com/ihgazni2/ecli",
@@ -27,7 +27,8 @@ setup(
               'ecli_pobj=ecli.bin.pobj:main',
               'ecli_lcp=ecli.bin.lcp:main',
               'ecli_ldd=ecli.bin.ldd:main',
-              'ecli_lcut=ecli.bin.lcut:main'
+              'ecli_lcut=ecli.bin.lcut:main',
+              'ecli_abbr=ecli.bin.abbr:main'
           ]
       },
       package_data={
@@ -41,6 +42,7 @@ setup(
 
 # python3 setup.py bdist --formats=tar
 # python3 setup.py sdist
+
 
 
 

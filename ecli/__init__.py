@@ -1,1 +1,1 @@
-__all__=['cmmn']
+__all__=['cmmn','abbr']
