@@ -57,6 +57,14 @@ listall
 .. image:: docs/jsonq-listall.png
 
 
+ecli_pobj
+#########
+    
+    ::
+        
+         #ecli_pobj -path pobj.json
+
+.. image:: docs/pobj-json.png
 
 
 License
