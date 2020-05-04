@@ -1,4 +1,4 @@
-/usr/local/lib/python3.6/dist-packages/ecli-0.0.14-py3.6.egg
+/usr/local/lib/python3.6/dist-packages/ecli-0.0.15-py3.6.egg
 /usr/local/bin/ecli_abbr
 /usr/local/bin/ecli_jsonq
 /usr/local/bin/ecli_lcp
