@@ -1,4 +1,4 @@
-/usr/local/lib/python3.6/dist-packages/ecli-0.0.18-py3.6.egg
+/usr/local/lib/python3.6/dist-packages/ecli-0.0.19-py3.6.egg
 /usr/local/bin/ecli_abbr
 /usr/local/bin/ecli_html_attrq
 /usr/local/bin/ecli_html_tagq
