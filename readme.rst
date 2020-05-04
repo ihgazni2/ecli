@@ -67,6 +67,36 @@ ecli_pobj
 .. image:: docs/pobj-json.png
 
 
+ecli_htmlq
+##########
+
+ecli_html_tagq
+~~~~~~~~~~~~~~
+    
+    ::
+        
+        #ecli_html_tagq tst.html "ead me"
+
+.. image:: docs/html-tagq.png
+
+ecli_html_attrq
+~~~~~~~~~~~~~~~
+    
+    ::
+        
+        #ecli_html_attrq tst.html "src"
+
+.. image:: docs/html-attrq.png
+
+ecli_html_txtq
+~~~~~~~~~~~~~~~
+    
+    ::
+        
+        #ecli_html_txtq tst.html "pdf"
+
+.. image:: docs/html-txtq.png
+
 License
 =======
 
