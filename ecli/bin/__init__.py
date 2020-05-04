@@ -1,1 +1,1 @@
-__all__=['srch','pobj','lcp','ldd','lcut','abbr']
+__all__=['srch','pobj','lcp','ldd','lcut','abbr','jsonq']
