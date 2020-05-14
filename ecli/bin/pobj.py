@@ -37,6 +37,7 @@ def boolstr2bool(s):
 args=parser.parse_args()
 p = args.path
 d = fs.rfile(p) if(fs.filexist(p)) else p
+d = eval(d)
 start = int(args.start)
 end = int(args.end)
 indent = int(args.indent)
