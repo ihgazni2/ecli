@@ -5,7 +5,7 @@ requirements = []
 
 setup(
       name="ecli",
-      version = "0.0.23", #@version@#
+      version = "0.0.24", #@version@#
       description="handle,.in progressing..,APIs",
       author="ihgazni2",
       url="https://github.com/ihgazni2/ecli",
@@ -23,6 +23,8 @@ setup(
       packages= find_packages(),
       entry_points={
           'console_scripts': [
+              'ecli_dir2pls=ecli.bin.dir2pls:main',
+              'ecli_dir2json=ecli.bin.dir2json:main',
               'ecli_srch=ecli.bin.srch:main',
               'ecli_pobj=ecli.bin.pobj:main',
               'ecli_jsonq=ecli.bin.jsonq:main',
@@ -46,6 +48,7 @@ setup(
 
 # python3 setup.py bdist --formats=tar
 # python3 setup.py sdist
+
 
 
 

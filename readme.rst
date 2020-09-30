@@ -20,6 +20,51 @@ Usage
 CLI    
 ^^^
 
+
+ecli_dir2pls
+############
+    
+    ::
+        
+        RESOURCES# ecli_dir2pls
+        ['opt', 'PY3', 'ECLI_', 'ecli', 'RESOURCES', 'BENCH']
+        ['opt', 'PY3', 'ECLI_', 'ecli', 'RESOURCES', 'BENCH', 'git']
+        ['opt', 'PY3', 'ECLI_', 'ecli', 'RESOURCES', 'BENCH', 'set_root']
+        ['opt', 'PY3', 'ECLI_', 'ecli', 'RESOURCES', 'BENCH', 'fdisk']
+        ['opt', 'PY3', 'ECLI_', 'ecli', 'RESOURCES', 'BENCH', 'py3']
+        ['opt', 'PY3', 'ECLI_', 'ecli', 'RESOURCES', 'BENCH', 'terminal']
+        ['opt', 'PY3', 'ECLI_', 'ecli', 'RESOURCES', 'BENCH', 'dir']
+        ['opt', 'PY3', 'ECLI_', 'ecli', 'RESOURCES', 'BENCH', 'gcc']
+        ['opt', 'PY3', 'ECLI_', 'ecli', 'RESOURCES', 'BENCH', 'js']
+        ['opt', 'PY3', 'ECLI_', 'ecli', 'RESOURCES', 'BENCH', 'vim']
+        ['opt', 'PY3', 'ECLI_', 'ecli', 'RESOURCES', 'BENCH', 'rpm']
+        =======
+        /opt/PY3/ECLI_/ecli/RESOURCES/BENCH
+        /opt/PY3/ECLI_/ecli/RESOURCES/BENCH/git
+        /opt/PY3/ECLI_/ecli/RESOURCES/BENCH/set_root
+        /opt/PY3/ECLI_/ecli/RESOURCES/BENCH/fdisk
+        /opt/PY3/ECLI_/ecli/RESOURCES/BENCH/py3
+        /opt/PY3/ECLI_/ecli/RESOURCES/BENCH/terminal
+        /opt/PY3/ECLI_/ecli/RESOURCES/BENCH/dir
+        /opt/PY3/ECLI_/ecli/RESOURCES/BENCH/gcc
+        /opt/PY3/ECLI_/ecli/RESOURCES/BENCH/js
+        /opt/PY3/ECLI_/ecli/RESOURCES/BENCH/vim
+        /opt/PY3/ECLI_/ecli/RESOURCES/BENCH/rpm
+        RESOURCES#
+
+
+ecli_dir2json
+#############
+    
+    ::
+        
+        ecli# cd RESOURCES/
+        RESOURCES# ecli_dir2json
+        {"opt": {"PY3": {"ECLI_": {"ecli": {"RESOURCES": {"BENCH": {"git": {}, "set_root": {}, "fdisk": {}, "py3": {}, "terminal": {}, "dir": {}, "gcc": {}, "js": {}, "vim": {}, "rpm": {}}}}}}}}
+        RESOURCES#
+
+
+
 ecli_jsonq
 ##########
 
